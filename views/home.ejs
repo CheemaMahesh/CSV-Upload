@@ -1,0 +1,23 @@
+<html>
+<head><title>Homepage</title></head>
+<body><h1>This is homepage</h1>
+
+
+
+<form action="/create/up" method="POST" enctype="multipart/form-data">
+    <input type="file" name="avatar" accept=".csv" id="CSVid">
+    <button>Upload</button>
+</form>
+
+<ul>
+    <%for(let a of aa){%>
+        <li>Avatar id:-<%=a.avatar%><br>
+        <b>fileName:-<%=a.filename%></b><br>
+        <i>Id:-<%=a._id%></i>
+        </li>
+
+        <%}%>
+</ul>
+
+</body>
+</html>
