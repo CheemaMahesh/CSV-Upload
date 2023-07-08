@@ -16,6 +16,9 @@ const csvSchema=new mongoose.Schema({
    },
    filename:{
     type:'String'
+   },
+   path:{
+    type:'String'
    }
 
 },{

@@ -11,12 +11,16 @@
 
 <ul>
     <%for(let a of aa){%>
+        <a href="/create/view/<%=a._id%>">
         <li>Avatar id:-<%=a.avatar%><br>
         <b>fileName:-<%=a.filename%></b><br>
         <i>Id:-<%=a._id%></i>
         </li>
+    </a>
+    <hr>
 
         <%}%>
+    
 </ul>
 
 </body>

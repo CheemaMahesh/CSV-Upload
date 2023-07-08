@@ -8,6 +8,7 @@ const csvControllers=require('../controllers/csv_controller');
 console.log("routes are loaded2");
 
 router.post('/up',csvControllers.upload);
+router.get('/view/:id',csvControllers.view);
 
 //exporting router
 module.exports=router;

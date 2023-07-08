@@ -1,4 +1,8 @@
 const CSV=require('../models/csv');
+const fs = require('fs');
+const csvParser = require('csv-parser');
+const path = require('path');
+
 
 module.exports.upload=async function(req,res){
     try{
@@ -15,7 +19,8 @@ module.exports.upload=async function(req,res){
       
         let csv=await CSV.create({
           avatar:CSV.csvPath+'/'+req.file.filename,
-          filename:name
+          filename:name,
+          path:req.file.path
         })
         return res.redirect('back');
       })
@@ -24,4 +29,41 @@ module.exports.upload=async function(req,res){
         if(err){console.log("error in uploading the file:-",err);return}
 
     }
+}
+
+
+//module export for the seperate page for csv file
+
+module.exports.view = async function (req, res) {
+  try {
+      // console.log(req.params);
+      let csvFile = await CSV.findOne({ _id: req.params.id });
+      // console.log('mahesh',csvFile);
+      const results = [];
+      const header = [];
+      fs.createReadStream(csvFile.path) //seeting up the path for file upload
+          .pipe(csvParser())
+          .on('headers', (headers) => {
+              headers.map((head) => {
+                  header.push(head);
+              });
+              // console.log(header);
+          })
+          .on('data', (data) =>
+              results.push(data))
+          .on('end', () => {
+              // console.log(results.length);
+              // console.log(results);
+              res.render("csv", {
+                  title: "File Viewer",
+                  ff:csvFile,
+                  head: header,
+                  data: results,
+                  length: results.length
+              });
+          });
+  } catch (error) {
+      console.log('Error in fileController/view', error);
+      res.status(500).send('Internal server error');
+  }
 }
