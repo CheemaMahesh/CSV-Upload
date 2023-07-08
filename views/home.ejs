@@ -1,27 +1,56 @@
 <html>
-<head><title>Homepage</title></head>
-<body><h1>This is homepage</h1>
+<head><title>Homepage</title>
+<link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
 
-
-
-<form action="/create/up" method="POST" enctype="multipart/form-data">
-    <input type="file" name="avatar" accept=".csv" id="CSVid">
-    <button>Upload</button>
+<!-- -------------------------------------=======================form for input file=======================---------------------------------------------- -->
+    <div class="file-input-div">
+<form action="/create/up" method="POST" enctype="multipart/form-data" class="file-input-form">
+    <div class="file-input-header"><h1>Upload CSV file below</h1></div>
+    <div class="file-input">    <input type="file" name="avatar" accept=".csv" id="CSVid">
+    </div>
+    <div class="form-button"><button>Upload</button></div>
+    
 </form>
+</div>
 
+<!-- ===========================================================================Uploaded-Files-Display-==================================================== -->
+<div class="uploaded-files-div">
+    <%if(aa.length==0){%>
+        <h1>Container is Empty</h1>
+        <%}else{%>
+            <table>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Time</th>
 <ul>
+
     <%for(let a of aa){%>
         <a href="/create/view/<%=a._id%>">
-        <li>Avatar id:-<%=a.avatar%><br>
+           
+
+        <li class="file-display-li">
+            <!-- Date:-<%=a.createdAt.toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})%><br>
+            Time:-<%=a.createdAt.toLocaleTimeString()%><br>
         <b>fileName:-<%=a.filename%></b><br>
-        <i>Id:-<%=a._id%></i>
+        <i>Id:-<%=a._id%></i> -->
+
+       <br> <td><%=a.filename%></td>
+       <td><%=a.createdAt.toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})%></td>
+       <td><%=a.createdAt.toLocaleTimeString()%></td>
+
+
         </li>
     </a>
-    <hr>
 
         <%}%>
-    
+        
 </ul>
+</table>
+
+<%}%>
+</div>
 
 </body>
 </html>

@@ -4,7 +4,10 @@ const app=express();
 
 const db=require('./config/mongoose');
 
+//static
+app.use(express.static('./assets'));
 
+//use ejs
 app.set('view engine','ejs');
 app.set('views','./views');
 

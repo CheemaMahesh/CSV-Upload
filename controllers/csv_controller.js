@@ -13,9 +13,8 @@ module.exports.upload=async function(req,res){
         // Access the uploaded file object
   const uploadedFile = req.file;
 
-  // Extract the name from the filename
-  const name = uploadedFile.originalname.split('.').slice(0, -1).join('.');
-
+ // Extract the name from the filename
+ const name = uploadedFile.originalname.split('.').slice(0, -1).join('.');
       
         let csv=await CSV.create({
           avatar:CSV.csvPath+'/'+req.file.filename,

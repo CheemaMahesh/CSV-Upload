@@ -1,0 +1,44 @@
+body{
+    background-color: darkgrey;
+}
+.file-input-div{
+    height:200px;
+    width:1525px;
+     background-image: linear-gradient(to right,cyan,green);
+    
+    }
+    .file-input-form{
+        display: flex;
+        flex-direction: column;
+       justify-content: space-between;
+       align-items: center;
+    }
+
+    .file-input input[type='file']{
+    /* background-color: rgb(224, 26, 26); */
+    width: 300px;
+    }
+
+
+    .form-button button{
+        margin-top: 10px;
+        margin-left: -90px;
+        border-radius: 0.4rem;
+        font-size: 1.4rem;
+        font-weight: 1000;
+        height:40px;
+        width:200px;
+        background-image: linear-gradient(to right,rgb(12, 145, 21),blue);
+    }
+
+    .form-button button:hover{
+        font-weight: 1200;
+        font-size: 2rem;
+        background-image: linear-gradient(to right,rgb(24, 143, 203),rgb(180, 122, 13));
+
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    
