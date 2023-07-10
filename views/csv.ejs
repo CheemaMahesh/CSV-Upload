@@ -1,43 +1,27 @@
-
-
-
-<!-- header -->
-<div class="nav-bar" style="position: fixed;">
-    <a href="/" class="back-icon">
-        <i class="fa-solid fa-circle-arrow-left" style="color: #b8b8b8;"></i>
-    </a>
-    <div class="title">
-        CSV Upload
-    </div>
-    <div class="sub-title">
-        Viewer
-    </div>
-    <div class="file-name">
-        <%=ff.filename %>
-    </div>
+<html>
+    <head>
+<link rel="stylesheet" href="/css/csv.css">
+</head>
+<body>
+<div class="nav-bar" ><span>NaveBar</span><span><a href="/">Home</a></span>
 </div>
 
-<!-- search bar -->
+<!-- ==========================================================Search-Bar-=============================================================== -->
 <div class="search-bar">
     <form id="searchForm">
         <div class="search-box">
-            <input type="text" id="search-input" placeholder="Search data...">
-            <button id="go" class="search-btn" type="button">Go</button>
+            <input type="text" id="input" placeholder="Search Here...">
+            <button id="search" class="search-btn" type="button">Search</button>
         </div>
     </form>
-    <div>
-        <p id="total-rows">Total Rows: <%=length%>
-        </p>
-    </div>
-</div>
 
-<!-- search results -->
+<!-- ===================================================CSV-Content-Display================================================================== -->
 <div>
     <table>
         <thead>
             <tr>
                 <% for(let h of head) { %>
-                    <th>
+                    <th class="headers">
                         <%= h %>
                     </th>
                     <% } %>
@@ -56,3 +40,7 @@
         </tbody>
     </table>
 </div>
+<script src="/js/csv.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.Match{
+    background-color: green;
+}
+
+.nav-bar{
+    display: flex;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.headers{
+    background-color: brown;
+}

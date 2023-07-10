@@ -66,3 +66,22 @@ module.exports.view = async function (req, res) {
       res.status(500).send('Internal server error');
   }
 }
+
+
+
+//deleting a csv file
+module.exports.deletes=async function(req,res){
+    try{
+        let csvFile = await CSV.findOne({ _id: req.params.id });
+        if(csvFile){
+            await CSV.findOneAndDelete({_id:req.params.id});
+            return res.redirect('back');
+        }
+        return res.redirect('back');
+      
+
+    }catch(err){
+        console.log("error in deleting the csv",err);
+        return;
+    }
+}

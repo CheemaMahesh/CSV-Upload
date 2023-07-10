@@ -7,7 +7,7 @@
 <!-- -------------------------------------=======================form for input file=======================---------------------------------------------- -->
     <div class="file-input-div">
 <form action="/create/up" method="POST" enctype="multipart/form-data" class="file-input-form">
-    <div class="file-input-header"><h1>Upload CSV file below</h1></div>
+    <div class="file-input-header"><h1>Upload CSV file Here</h1></div>
     <div class="file-input">    <input type="file" name="avatar" accept=".csv" id="CSVid">
     </div>
     <div class="form-button"><button>Upload</button></div>
@@ -20,34 +20,24 @@
     <%if(aa.length==0){%>
         <h1>Container is Empty</h1>
         <%}else{%>
-            <table>
-                <th>Name</th>
-                <th>Date</th>
-                <th>Time</th>
+
+<div class="headings">
+    <div class="hedings-One">Name</div>
+    <div class="hedings-Two">Date</div>
+    <div class="hedings-Three">Time</div>
+    <div class="hedings-Four">Delete</div>
+</div>     
 <ul>
-
     <%for(let a of aa){%>
-        <a href="/create/view/<%=a._id%>">
-           
-
         <li class="file-display-li">
-            <!-- Date:-<%=a.createdAt.toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})%><br>
-            Time:-<%=a.createdAt.toLocaleTimeString()%><br>
-        <b>fileName:-<%=a.filename%></b><br>
-        <i>Id:-<%=a._id%></i> -->
-
-       <br> <td><%=a.filename%></td>
-       <td><%=a.createdAt.toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})%></td>
-       <td><%=a.createdAt.toLocaleTimeString()%></td>
-
-
+     <div> <a href="/create/view/<%=a._id%>" target="_blank"><%=a.filename%></a></div>
+     <div class="ulLiDivThree">  <a href="/create/view/<%=a._id%>" target="_blank"><%=a.createdAt.toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})%></a></div>
+     <div class="ulLiDivThree"> <a href="/create/view/<%=a._id%>" target="_blank"><%=a.createdAt.toLocaleTimeString()%></a></div> 
+     <div class="ulLiDivThree"> <a href="/create/delete/<%=a._id%>">DELETE</a></div>
         </li>
-    </a>
-
-        <%}%>
-        
+        <%}%>  
 </ul>
-</table>
+
 
 <%}%>
 </div>

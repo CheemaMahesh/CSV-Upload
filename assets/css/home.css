@@ -1,5 +1,5 @@
 body{
-    background-color: darkgrey;
+    background-image: linear-gradient(to right,rgb(114, 114, 207),rgb(205, 205, 83));
 }
 .file-input-div{
     height:200px;
@@ -41,4 +41,55 @@ body{
        justify-content: center;
        align-items: center;
     }
+
+    /* ===========================================Table-Headings============================================================================= */
+    .headings{
+        height:70px;
+        width:1525px;
+        background-image: linear-gradient(to right,rgb(114, 114, 207),rgb(205, 205, 83));
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    .headings div{
+        height:100%;
+        width:25%;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    ul{
+        width:1483.5px;
+        background-image: linear-gradient(to right,rgb(114, 114, 207),rgb(205, 205, 83));
+    }
+  ul  li{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    font-style: italic;
+    }
+  
+
+    .ulLiDivThree{
+        margin-left: 70px;
+    }
+   
+    ul li div{
+        width:25%;
+        margin-top: 20px;
+        overflow: hidden;
+        font-weight: bold;
+    }
+    ul li div a{
+        text-decoration: none;
+        color: black;
+    }
+    
+
     
