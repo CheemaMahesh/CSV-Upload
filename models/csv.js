@@ -36,7 +36,7 @@ let storage = multer.diskStorage({
     }
   })
 
-//static methods
+//static methods//===//
 csvSchema.statics.uploadedAvatar=multer({storage:storage}).single('avatar');
 csvSchema.statics.csvPath=CSV_PATH;
 
