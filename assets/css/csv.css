@@ -1,12 +1,64 @@
-.Match{
-    background-color: green;
+body{
+    background-image: linear-gradient(to right,rgb(114, 114, 207),rgb(205, 205, 83));
 }
-
+/* ====================================nav-bar========================================= */
 .nav-bar{
     display: flex;
     font-size: 2rem;
     font-weight: bold;
+    /* justify-content: center; */
+    height:60px;
 }
+.home{
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home a{
+    text-decoration: none;
+    color: beige;
+    font-weight: bold;
+}
+.search-bar{
+    margin-left: 600px;
+    
+}
+.search-box{
+    /* margin-top: 20px; */
+    /* padding-top: 10px; */
+}
+
+#input{
+    /* margin-top: 30px; */
+    height:50px;
+    /* background-color: azure; */
+    width: 300px;
+    border-radius: 0.5rem;
+}
+#input::placeholder{
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+.search-btn{
+    height:50px;
+    /* background-color: azure; */
+    width: 100px;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* position: fixed; */
+    /* margin-top: 5px!important; */
+}
+
+
 .headers{
     background-color: brown;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+/* =========================Searched-Data============================================= */
+.Match{
+    background-color: green;
 }
