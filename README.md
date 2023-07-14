@@ -48,6 +48,25 @@ Follow these steps to set up the project on your local system:
 10.Start the server by running the following command in the terminal:
  10.i) nodemon index.js
 
+
+
+**Features**
+***CSV File Upload***
+Use the file input element in the HTML form to allow users to select and upload a CSV file.
+
+The server-side code in server.js should handle the file upload using Multer and save the file to a designated folder.
+
+**List of Uploaded CSV Files**
+Display a list of all uploaded CSV files on the front-end.
+
+Use JavaScript to fetch the list of files from the server and dynamically update the HTML to show the file names.
+
+**Display Data in Table**
+When a user selects a CSV file from the list, fetch the file data from the server and display it in a table on the front-end.
+
+Parse the CSV file using the csv-parser library and dynamically generate the table headers based on the column headers in the CSV file.
+
+
  
   
 
