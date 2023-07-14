@@ -17,6 +17,12 @@
       |__.gitignore
       |
       |
+      |__uploads=======csv
+      |                           |
+      |                           |==csv.ejs
+      |__views=====================
+      |                           |==home.ejs
+      |                           |
       |__index.js
       |
       |
