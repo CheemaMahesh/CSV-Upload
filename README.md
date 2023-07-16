@@ -64,7 +64,7 @@ Follow these steps to set up the project on your local system:
             1.localhost:8000  (home Page)(GET)
             2.localhost:8000/create/up (POST)
             3.localhost:8000/create/view/:id (GET)
-            4.localhost:8000/created/deletes/:id (GET)
+            4.localhost:8000/created/delete/:id (GET)
 
 
  
