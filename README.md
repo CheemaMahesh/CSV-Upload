@@ -47,12 +47,15 @@ Follow these steps to set up the project on your local system:
 2.Make sure you have Node.js and npm (Node Package Manager) installed on your system.
 3.Open a terminal or command prompt and navigate to the project directory.
 4.Run the following command to initialize a new Node.js project:
-   4.i) npm init -y
-5.Install the necessary dependencies by running the following command:
-5.i)  npm install express multer csv-parser
-6.Create the folder structure as shown above
-10.Start the server by running the following command in the terminal:
- 10.i) nodemon index.js
+      i.npm init
+     ii.npm install express
+    iii.npm install express-ejs
+     vi.npm install mongoose
+      v.npm install multer
+      vi.npm install csv-parser
+5.Create the folder structure as shown above
+6.Start the server by running the following command in the terminal:
+ i) nodemon index.js
 
 
 
